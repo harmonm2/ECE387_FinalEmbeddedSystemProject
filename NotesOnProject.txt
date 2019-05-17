@@ -1,0 +1,27 @@
+Project Progress
+
+Day 1
+- designed environment, enemies, and player
+- defined environment in Arduino by creating char array of pixel values either 0 or 1
+- drafted code for intializing menu and environment
+- drafted code for player movement using buttons
+- created a separate module to test the GPS 
+-  created a separate module to test the Pedometer
+
+Day 2
+- created a seprate module to test the Joystick
+- wired all connections, used modules to test the funtionality of all parts
+- created menu screen
+- start button takes you to the game screen
+- discovered multiple limitations with the LCD
+	- [1] can only define eight specialized characters
+		- consequently the obstacles I designed could not be added in the game
+	- [2] the LiquidCrystal library is very basic
+		- this led to problems implementing a redraw function into the game
+			- the problem appeared when changing from one specialized character frame to the next
+			- consequently the background of the game was removed and then use setCursor method to move circle around with Joystick
+- Miami Gym GPS coordinates
+	- const double gymLatitude = 39.502752;
+	- const double gymLongitude = -84.737871;
+- discovered limitations with the GPS
+	- [1] need to be outside to get a "fix" / long, lat coordinates
